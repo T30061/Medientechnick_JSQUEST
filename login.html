@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="Melde dich bei JS Studio an und speichere deinen JavaScript-Lernfortschritt sicher auf dem Server.">
+  <title>Konto — JS Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/auth.css">
+  <script src="js/auth.js" defer></script>
+  <script src="js/login.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Hauptnavigation">
+      <a class="brand" href="index.html" aria-label="JS Studio Startseite"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a>
+      <a class="nav-cta" href="index.html">Zurück zum Lernpfad ↗</a>
+    </nav>
+  </header>
+  <main class="auth-shell">
+    <section class="auth-card" aria-labelledby="auth-title">
+      <div class="auth-emblem" aria-hidden="true">&lt;JS&gt;</div>
+      <p class="eyebrow">DEIN LERNSTAND. DEIN ABENTEUER.</p>
+      <h1 id="auth-title">Willkommen<br><span>zurück.</span></h1>
+      <p class="auth-intro">Melde dich an, damit deine XP und abgeschlossenen Lektionen serverseitig in deinem Konto gespeichert werden.</p>
+
+      <div class="auth-account" data-auth-account hidden>
+        <p class="account-state"><span class="status-dot"></span> ANGEMELDET</p>
+        <p class="account-email" data-account-email></p>
+        <div class="account-id-row"><span>Deine Konto-ID</span><button type="button" class="copy-id" data-copy-id>Kopieren</button></div>
+        <code class="account-id" data-account-id></code>
+        <div class="account-stats"><span data-account-xp>0 XP</span><span data-account-lessons>0 / 21 Lektionen</span></div>
+        <button type="button" class="auth-button auth-button-secondary" data-logout>Abmelden</button>
+      </div>
+
+      <div data-auth-guest>
+        <div class="auth-tabs" role="tablist" aria-label="Kontoaktion">
+          <button type="button" class="auth-tab is-active" role="tab" aria-selected="true" data-mode="login">Anmelden</button>
+          <button type="button" class="auth-tab" role="tab" aria-selected="false" data-mode="register">Konto erstellen</button>
+        </div>
+        <form class="auth-form" id="auth-form" novalidate>
+          <label for="email">E-Mail-Adresse</label>
+          <input id="email" name="email" type="email" autocomplete="email" maxlength="254" placeholder="du@beispiel.de" required>
+          <label for="password">Passwort</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" minlength="12" maxlength="128" placeholder="Mindestens 12 Zeichen" required>
+          <div class="password-confirmation" data-confirmation hidden>
+            <label for="password-confirm">Passwort wiederholen</label>
+            <input id="password-confirm" name="passwordConfirm" type="password" autocomplete="new-password" minlength="12" maxlength="128" placeholder="Passwort erneut eingeben">
+            <p>Verwende ein langes, einzigartiges Passwort, das du nicht auf anderen Seiten nutzt.</p>
+          </div>
+          <button class="auth-button" type="submit" data-submit>Anmelden <span aria-hidden="true">→</span></button>
+        </form>
+      </div>
+      <p class="auth-message" id="auth-message" aria-live="polite" role="status">Verbindung zum Lernserver wird hergestellt …</p>
+      <p class="privacy-note">Dein Passwort wird niemals im Klartext gespeichert. Der Server speichert einen geschützten Passwort-Hash.</p>
+    </section>
+    <aside class="auth-side-note"><span aria-hidden="true">✳</span> Weiterlernen, XP sammeln, Level aufsteigen.</aside>
+  </main>
+  <footer class="site-footer"><a class="brand" href="index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="index.html#themen">Zum Lernpfad ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10100f">
+    <meta name="description" content="JavaScript einfach verstehen: Entdecke Grundlagen, interaktive Beispiele und Übungen für den Einstieg in die Webentwicklung.">
+    <title>JS Studio — JavaScript einfach lernen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+    <script src="js/auth.js" defer></script>
+    <script src="js/quest.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Hauptnavigation">
+            <a class="brand" href="#start" aria-label="JS Studio Startseite">
+                <span class="brand-mark" aria-hidden="true">JS</span>
+                <span>js<span class="brand-light">studio</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#themen">Themen</a>
+                <a href="#spielwiese">Spielwiese</a>
+                <a class="nav-cta" href="login.html" data-auth-link>Anmelden</a>
+                <a class="nav-cta" href="html/uebung.html">Zur Übung <span aria-hidden="true">↗</span></a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="start">
+        <section class="hero section-shell">
+            <div class="hero-copy" data-reveal>
+                <p class="eyebrow"><span class="status-dot"></span> DEIN EINSTIEG IN DIE WEBENTWICKLUNG</p>
+                <h1>Mach das Web<br>ein bisschen <span>lebendiger.</span></h1>
+                <p class="hero-text">Lerne JavaScript Schritt für Schritt — mit verständlichen Beispielen, kleinen Quests, sammelbaren XP und einer Extraportion Neugier.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#themen">Lernen starten <span aria-hidden="true">→</span></a>
+                    <a class="text-link" href="#spielwiese">Erst ausprobieren <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="hero-note"><span aria-hidden="true">✳</span> Keine Vorkenntnisse nötig. Nur ein Browser.</div>
+            </div>
+
+            <div class="code-window" data-reveal aria-label="JavaScript-Codebeispiel">
+                <div class="window-bar">
+                    <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+                    <span>dein-erster-schritt.js</span>
+                    <span class="window-language">JAVASCRIPT</span>
+                </div>
+                <div class="code-content" aria-hidden="true">
+                    <div><span class="line-number">01</span><span class="syntax-muted">// Alles beginnt mit einer Idee</span></div>
+                    <div><span class="line-number">02</span><span><span class="syntax-purple">const</span> <span class="syntax-blue">idee</span> = <span class="syntax-green">"Hallo, Web!"</span>;</span></div>
+                    <div class="code-gap"><span class="line-number">03</span></div>
+                    <div><span class="line-number">04</span><span class="syntax-purple">function</span> <span class="syntax-yellow">machEsLebendig</span>() {</span></div>
+                    <div><span class="line-number">05</span><span class="indent"><span class="syntax-purple">return</span> <span class="syntax-blue">idee</span> + <span class="syntax-green">" ✨"</span>;</span></div>
+                    <div><span class="line-number">06</span>}</div>
+                    <div class="code-gap"><span class="line-number">07</span></div>
+                    <div><span class="line-number">08</span><span class="syntax-yellow">console</span>.<span class="syntax-blue">log</span>(<span class="syntax-yellow">machEsLebendig</span>());</div>
+                </div>
+                <div class="code-result"><span class="result-indicator"></span><span>Ausgabe</span><code>Hallo, Web! ✨</code></div>
+                <span class="sparkle sparkle-one" aria-hidden="true">✳</span>
+                <span class="sparkle sparkle-two" aria-hidden="true">✦</span>
+            </div>
+        </section>
+
+        <section class="learning section-shell" id="themen" aria-labelledby="topics-title">
+            <div class="section-heading" data-reveal>
+                <div>
+                    <p class="eyebrow">KLEIN ANFANGEN. GROSS RAUSKOMMEN.</p>
+                    <h2 id="topics-title">Dein Werkzeugkasten<br>fürs Web.</h2>
+                </div>
+                <p>JavaScript ist die Sprache, die Webseiten auf deine Aktionen reagieren lässt. Hier lernst du die wichtigsten Bausteine kennen.</p>
+            </div>
+            <div class="topic-grid">
+                <article class="topic-card" data-reveal>
+                    <div class="topic-icon icon-yellow" aria-hidden="true">{ }</div>
+                    <p class="topic-kicker">01 / DIE GRUNDLAGEN</p>
+                    <h3>Sprich JavaScript</h3>
+                    <p>Variablen, Datentypen und Funktionen — die kleinen Bausteine, aus denen große Ideen werden.</p>
+                    <a href="html/syntax.html" class="card-link">Grundlagen entdecken <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="topic-card" data-reveal>
+                    <div class="topic-icon icon-purple" aria-hidden="true">&lt;/&gt;</div>
+                    <p class="topic-kicker">02 / IM BROWSER</p>
+                    <h3>Bring Seiten in Bewegung</h3>
+                    <p>Finde HTML-Elemente, reagiere auf Klicks und verändere Inhalte direkt auf der Seite.</p>
+                    <a href="html/dom.html" class="card-link">DOM kennenlernen <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="topic-card" data-reveal>
+                    <div class="topic-icon icon-green" aria-hidden="true">↗</div>
+                    <p class="topic-kicker">03 / SELBER MACHEN</p>
+                    <h3>Üben macht sicher</h3>
+                    <p>Teste dein Wissen mit einer übersichtlichen Übung zu JavaScript-Ausgabemethoden.</p>
+                    <a href="html/uebung.html" class="card-link">Zur ersten Übung <span aria-hidden="true">↗</span></a>
+                </article>
+            </div>
+            <div class="curriculum-heading" data-reveal>
+                <div>
+                    <p class="eyebrow">DER KOMPLETTE LERNPFAD</p>
+                    <h2>Ein Thema nach dem anderen.</h2>
+                </div>
+                <p>Von den ersten Variablen bis zu Modulen und Debugging. Jede Lektion hat eine eigene Seite mit Erklärungen und Codebeispielen.</p>
+            </div>
+            <div class="curriculum-progress" aria-label="Dein Lernfortschritt">
+                <div class="curriculum-progress-top"><strong>Dein Fortschritt <span class="quest-rank" data-quest-level>Level 1 · Code-Neuling</span></strong><span data-quest-xp>0 XP</span></div>
+                <div class="curriculum-progress-meta"><span data-quest-count>0 / 21 Lektionen</span><span data-quest-label>0% geschafft</span></div>
+                <div class="curriculum-progress-track" role="progressbar" aria-label="Abgeschlossene Lektionen" aria-valuemin="0" aria-valuemax="21" aria-valuenow="0"><span data-quest-progress></span></div>
+                <p>Schließe Mini-Quests ab und sammle XP — dein Spielstand bleibt in diesem Browser gespeichert.</p>
+            </div>
+            <nav class="curriculum-grid" aria-label="Alle JavaScript-Lektionen">
+                <a class="curriculum-link" href="html/syntax.html"><span>01</span><strong>Erste Schritte</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/variablen.html"><span>02</span><strong>Variablen &amp; Konstanten</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/datentypen.html"><span>03</span><strong>Datentypen</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/operatoren.html"><span>04</span><strong>Operatoren</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/bedingungen.html"><span>05</span><strong>Bedingungen</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/schleifen.html"><span>06</span><strong>Schleifen</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/funktionen.html"><span>07</span><strong>Funktionen</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/arrays.html"><span>08</span><strong>Arrays</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/array-methoden.html"><span>09</span><strong>Array-Methoden</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/objekte.html"><span>10</span><strong>Objekte</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/sets-maps.html"><span>11</span><strong>Set &amp; Map</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/dom.html"><span>12</span><strong>Das DOM</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/events.html"><span>13</span><strong>Ereignisse</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/formulare.html"><span>14</span><strong>Formulare</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/uebung.html"><span>15</span><strong>Ausgabemethoden</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/zeichenketten.html"><span>16</span><strong>String-Methoden</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/zeit-math.html"><span>17</span><strong>Math &amp; Datum</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/speicher.html"><span>18</span><strong>Browser-Speicher</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/asynchron.html"><span>19</span><strong>Asynchrones JavaScript</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/module.html"><span>20</span><strong>Module</strong><span aria-hidden="true">↗</span></a>
+                <a class="curriculum-link" href="html/debugging.html"><span>21</span><strong>Fehler &amp; Debugging</strong><span aria-hidden="true">↗</span></a>
+            </nav>
+        </section>
+
+        <section class="playground section-shell" id="spielwiese" aria-labelledby="playground-title">
+            <div class="playground-copy" data-reveal>
+                <p class="eyebrow"><span class="status-dot"></span> DEINE KLEINE SPIELWIESE</p>
+                <h2 id="playground-title">Dein erster<br><span>„Hallo!“-Moment.</span></h2>
+                <p>Gib deinen Namen ein und schau, was passiert. Genau so werden Webseiten interaktiv: Eingabe rein, JavaScript dazu, Ergebnis raus.</p>
+            </div>
+            <form class="demo-card" id="greeting-form" data-reveal>
+                <label for="visitor-name">Wie sollen wir dich nennen?</label>
+                <div class="input-row">
+                    <input id="visitor-name" name="name" type="text" maxlength="40" placeholder="Dein Name" autocomplete="given-name">
+                    <button class="button button-primary" type="submit">Ausführen <span aria-hidden="true">▶</span></button>
+                </div>
+                <p class="demo-output" id="greeting-output" aria-live="polite" role="status">Deine Ausgabe erscheint hier …</p>
+                <p class="demo-caption"><span aria-hidden="true">✳</span> Kleiner Tipp: Drück auch mal die Enter-Taste.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+        <a class="brand" href="#start"><span class="brand-mark" aria-hidden="true">JS</span><span>js<span class="brand-light">studio</span></span></a>
+        <p>Mit Neugier gebaut. <span aria-hidden="true">✳</span> JavaScript für alle.</p>
+        <a class="footer-top" href="#start">Zurück nach oben ↑</a>
+    </footer>
+</body>
+</html>
