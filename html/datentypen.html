@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Datentypen — JS Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css">
+</head>
+<body data-lesson-id="datentypen" data-quiz-question="Welchen Typ gibt typeof 42 zurück?" data-quiz-options="string|number|boolean" data-quiz-answer="1" data-quiz-hint="42 ist eine Zahl. Der englische Typname bedeutet ebenfalls Zahl.">
+<script src="../js/quest.js" defer></script>
+<header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">03 / DATEN VERSTEHEN</p><h1>Jeder Wert<br><span>hat einen Typ.</span></h1><p class="lead">Datentypen beschreiben, welche Art von Wert du verwendest. Sie entscheiden zum Beispiel, ob JavaScript rechnen oder Text verbinden soll.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>Primitive Werte und Typumwandlung</span></p>
+<section class="lesson-card"><h2>Häufige Datentypen</h2><ul><li><code>string</code> — Text, zum Beispiel <code>"Hallo"</code></li><li><code>number</code> — ganze Zahlen und Kommazahlen, zum Beispiel <code>42</code> oder <code>3.14</code></li><li><code>boolean</code> — wahr oder falsch: <code>true</code> / <code>false</code></li><li><code>undefined</code> — ein Wert wurde noch nicht festgelegt</li><li><code>null</code> — absichtlich kein Wert</li></ul><pre><code>const titel = "JS Studio"; // string
+const kapitel = 4;          // number
+const fertig = false;       // boolean
+console.log(typeof titel);  // "string"</code></pre></section>
+<section class="lesson-card"><h2>Auf Typen achten</h2><p>Mit dem Pluszeichen kann JavaScript Zahlen addieren oder Texte zusammenfügen. Eine Eingabe aus einem HTML-Feld ist zunächst Text — auch dann, wenn darin Ziffern stehen.</p><pre><code>console.log(2 + 3);       // 5
+console.log("2" + 3);     // "23"
+console.log(Number("2") + 3); // 5</code></pre><p><code>Number()</code>, <code>String()</code> und <code>Boolean()</code> wandeln Werte in einen anderen Typ um. Prüfe Eingaben, bevor du mit ihnen rechnest.</p></section>
+<p class="tip"><strong>Merke:</strong> <code>typeof</code> hilft beim Untersuchen eines Wertes. Beachte: <code>typeof null</code> ergibt aus historischen Gründen <code>"object"</code>.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="variablen.html"><span>← VORHERIGES THEMA</span><strong>Variablen</strong></a><a href="operatoren.html"><span>NÄCHSTES THEMA →</span><strong>Operatoren</strong></a></nav></main>
+<footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

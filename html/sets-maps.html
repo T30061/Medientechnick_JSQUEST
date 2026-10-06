@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Set und Map — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="sets-maps" data-quiz-question="Was speichert ein Set nur einmal?" data-quiz-options="Eindeutige Werte|Nur Zahlen|Nur Schlüssel und Werte" data-quiz-answer="0" data-quiz-hint="Ein Set verwirft doppelte Einträge automatisch."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">11 / SAMMLUNGEN SPEZIALISIERT VERWALTEN</p><h1>Mehr als Array<br><span>und Objekt.</span></h1><p class="lead">JavaScript bietet <code>Set</code> und <code>Map</code> für besondere Sammlungen: eindeutige Werte oder Schlüssel-Wert-Paare mit flexiblen Schlüsseltypen.</p><p class="lesson-meta"><span>Fortgeschrittene Grundlagen</span><span>·</span><span>Set, Map und häufige Methoden</span></p>
+<section class="lesson-card"><h2>Set: nur eindeutige Werte</h2><p>Ein <code>Set</code> speichert jeden Wert höchstens einmal. Es eignet sich zum Entfernen von Duplikaten oder für schnelle Mitgliedschaftsprüfungen.</p><pre><code>const tags = new Set(["js", "web", "js"]);
+tags.add("lernen");
+console.log(tags.has("web")); // true
+console.log([...tags]);       // ["js", "web", "lernen"]</code></pre></section>
+<section class="lesson-card"><h2>Map: Schlüssel und Werte</h2><p>Eine <code>Map</code> speichert Zuordnungen. Anders als bei einem Objekt können Schlüssel jeden Datentyp haben. Nützliche Methoden sind <code>set()</code>, <code>get()</code>, <code>has()</code> und <code>delete()</code>.</p><pre><code>const punkte = new Map();
+punkte.set("Mila", 12);
+punkte.set("Noah", 9);
+console.log(punkte.get("Mila")); // 12
+console.log(punkte.size);        // 2</code></pre></section>
+<p class="tip"><strong>Merke:</strong> Nutze ein Array für eine geordnete Liste, ein Set für eindeutige Werte und eine Map für eine Sammlung von Schlüssel-Wert-Zuordnungen.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="objekte.html"><span>← VORHERIGES THEMA</span><strong>Objekte</strong></a><a href="dom.html"><span>NÄCHSTES THEMA →</span><strong>Das DOM</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body>
+<script src="../js/quest.js" defer></script>
+</html>

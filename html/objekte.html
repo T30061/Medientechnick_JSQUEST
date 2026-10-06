@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Objekte — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="objekte" data-quiz-question="Wie liest du die name-Eigenschaft aus person?" data-quiz-options="person.name|person-name|name.person" data-quiz-answer="0" data-quiz-hint="Mit der Punktnotation schreibst du erst den Objektnamen, dann einen Punkt und den Eigenschaftsnamen."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">10 / ZUSAMMENGEHÖRIGES BESCHREIBEN</p><h1>Objekte:<br><span>Dinge mit Details.</span></h1><p class="lead">Ein Objekt fasst Eigenschaften und Funktionen zusammen, die zu einer Sache gehören. Damit kannst du strukturierte Daten wie ein Profil oder ein Produkt beschreiben.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>Eigenschaften, Methoden und Destrukturierung</span></p>
+<section class="lesson-card"><h2>Ein Objekt erstellen</h2><p>Eigenschaften bestehen aus einem Schlüssel und einem Wert. Mit Punktnotation kannst du häufig verwendete Eigenschaften lesen und ändern.</p><pre><code>const person = {
+  name: "Mila",
+  alter: 19,
+  begruessen() {
+    return `Hi, ich bin ${this.name}.`;
+  }
+};
+
+console.log(person.name);
+console.log(person.begruessen());</code></pre></section>
+<section class="lesson-card"><h2>Eigenschaften sicher lesen</h2><p>Mit Klammernotation kannst du auf einen Schlüssel zugreifen, der in einer Variablen steht. Destrukturierung kopiert ausgewählte Eigenschaften in eigene Variablen.</p><pre><code>const schluessel = "alter";
+console.log(person[schluessel]);
+
+const { name, alter } = person;
+console.log(`${name} ist ${alter}.`);</code></pre><p>Eine Methode ist eine Funktion, die als Eigenschaft eines Objekts gespeichert wird. <code>this</code> bezieht sich in dieser Methode auf das Objekt, über das sie aufgerufen wurde.</p></section>
+<p class="tip"><strong>Merke:</strong> Arrays eignen sich für geordnete Listen; Objekte eignen sich für benannte Eigenschaften eines einzelnen Eintrags.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="array-methoden.html"><span>← VORHERIGES THEMA</span><strong>Array-Methoden</strong></a><a href="sets-maps.html"><span>NÄCHSTES THEMA →</span><strong>Set &amp; Map</strong></a></nav>
+<script src="../js/quest.js" defer></script></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

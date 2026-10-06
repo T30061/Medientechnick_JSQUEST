@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Schleifen — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="schleifen" data-quiz-question="Wie oft läuft for (let i = 0; i &lt; 3; i++)?" data-quiz-options="2-mal|3-mal|4-mal" data-quiz-answer="1" data-quiz-hint="Die Zählung startet bei 0 und endet, bevor i den Wert 3 erreicht.">
+  <script src="../js/quest.js" defer></script>
+<header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">06 / WIEDERHOLUNGEN AUTOMATISIEREN</p><h1>Wiederhole<br><span>ohne Copy &amp; Paste.</span></h1><p class="lead">Schleifen führen einen Codeblock mehrfach aus. So kannst du Listen durchgehen oder eine Aufgabe wiederholen, solange eine Bedingung erfüllt ist.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>for und while</span></p>
+<section class="lesson-card"><h2>Die for-Schleife</h2><p>Nutze <code>for</code>, wenn du weißt, wie oft etwas wiederholt werden soll. Der Kopf der Schleife enthält Startwert, Bedingung und Veränderung.</p><pre><code>for (let nummer = 1; nummer <= 3; nummer++) {
+  console.log("Runde", nummer);
+}</code></pre><p>Die Ausgabe zählt von 1 bis 3. Bei jedem Durchlauf wird <code>nummer++</code> ausgeführt.</p></section>
+<section class="lesson-card"><h2>Die while-Schleife</h2><p>Eine <code>while</code>-Schleife läuft, solange ihre Bedingung wahr ist. Achte darauf, dass sich die Bedingung irgendwann ändert — sonst entsteht eine Endlosschleife.</p><pre><code>let restlicheVersuche = 3;
+while (restlicheVersuche > 0) {
+  console.log("Versuche übrig:", restlicheVersuche);
+  restlicheVersuche--;
+}</code></pre><p>Für Listen sind außerdem <code>for...of</code> und Array-Methoden wie <code>forEach()</code> oft gut lesbare Alternativen.</p></section>
+<p class="tip"><strong>Merke:</strong> Prüfe Startwert, Abbruchbedingung und Aktualisierung. Ein häufiger Fehler ist ein Grenzwert, der nie erreicht wird.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="bedingungen.html"><span>← VORHERIGES THEMA</span><strong>Bedingungen</strong></a><a href="funktionen.html"><span>NÄCHSTES THEMA →</span><strong>Funktionen</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

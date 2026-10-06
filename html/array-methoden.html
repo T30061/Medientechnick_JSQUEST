@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Array-Methoden — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="array-methoden" data-quiz-question="Welche Array-Methode gibt alle Einträge zurück, die eine Bedingung erfüllen?" data-quiz-options="map()|filter()|find()" data-quiz-answer="1" data-quiz-hint="Der Methodenname beschreibt das Aussortieren und Behalten passender Werte.">
+  <script src="../js/quest.js" defer></script>
+<header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">09 / ARRAYS BEARBEITEN</p><h1>Die nützlichsten<br><span>Array-Methoden.</span></h1><p class="lead">Array-Methoden filtern, verändern oder untersuchen Listen. Die Methoden <code>map()</code>, <code>filter()</code> und <code>find()</code> sind besonders häufig im Einsatz.</p><p class="lesson-meta"><span>Fortgeschrittene Grundlagen</span><span>·</span><span>map, filter, find und reduce</span></p>
+<section class="lesson-card"><h2>Aus jedem Eintrag etwas machen: map()</h2><p><code>map()</code> ruft eine Funktion für jedes Element auf und liefert ein neues Array zurück.</p><pre><code>const preise = [10, 20, 30];
+const mitSteuer = preise.map(preis => preis * 1.19);
+console.log(mitSteuer); // [11.9, 23.8, 35.7]</code></pre></section>
+<section class="lesson-card"><h2>Auswahl treffen: filter() und find()</h2><p><code>filter()</code> sammelt alle Elemente, die eine Bedingung erfüllen. <code>find()</code> gibt nur das erste passende Element zurück.</p><pre><code>const punkte = [4, 12, 7, 20];
+const hohePunkte = punkte.filter(punkt => punkt >= 10);
+const ersterTreffer = punkte.find(punkt => punkt > 10);
+// hohePunkte: [12, 20]; ersterTreffer: 12</code></pre></section>
+<section class="lesson-card"><h2>Auf einen Wert reduzieren: reduce()</h2><p><code>reduce()</code> kombiniert die Elemente zu einem einzelnen Ergebnis, zum Beispiel einer Summe. Der Startwert steht als zweites Argument.</p><pre><code>const summe = [4, 12, 7].reduce(
+  (gesamt, zahl) => gesamt + zahl,
+  0
+);
+console.log(summe); // 23</code></pre></section>
+<p class="tip"><strong>Merke:</strong> <code>map()</code> erstellt eine umgewandelte Liste, <code>filter()</code> eine Auswahl und <code>find()</code> einen einzelnen Treffer. Sie verändern das ursprüngliche Array nicht.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="arrays.html"><span>← VORHERIGES THEMA</span><strong>Arrays</strong></a><a href="objekte.html"><span>NÄCHSTES THEMA →</span><strong>Objekte</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

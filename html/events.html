@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Ereignisse — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="events" data-quiz-question="Mit welcher Methode reagierst du auf einen Klick?" data-quiz-options="addEventListener()|querySelector()|createElement()" data-quiz-answer="0" data-quiz-hint="Die Methode verbindet ein Ereignis mit einer Funktion, die darauf reagieren soll.">
+  <script src="../js/quest.js" defer></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100f">
+  <title>Ereignisse — JS Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/lesson.css">
+</head>
+<body><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">13 / AUF AKTIONEN REAGIEREN</p><h1>Ein Klick.<br><span>Eine Reaktion.</span></h1><p class="lead">Ereignisse (Events) melden, dass etwas passiert ist — etwa ein Klick, eine Texteingabe oder das Absenden eines Formulars. Mit Event-Listenern reagiert dein Code darauf.</p><p class="lesson-meta"><span>Webentwicklung</span><span>·</span><span>click, input und submit</span></p>
+<section class="lesson-card"><h2>Einen Klick abfangen</h2><p><code>addEventListener()</code> verbindet ein Element mit einem Ereignis und einer Funktion, die beim Ereignis ausgeführt wird.</p><pre><code>const knopf = document.querySelector("button");
+const ausgabe = document.querySelector("p");
+
+knopf.addEventListener("click", () => {
+  ausgabe.textContent = "Du hast geklickt!";
+});</code></pre></section>
+<section class="lesson-card"><h2>Eingaben beobachten</h2><p>Das <code>input</code>-Ereignis wird ausgelöst, während sich der Feldinhalt verändert. Beim Formularereignis <code>submit</code> kannst du den Standard-Seitenwechsel verhindern.</p><pre><code>const feld = document.querySelector("input");
+feld.addEventListener("input", (event) => {
+  console.log(event.currentTarget.value);
+});</code></pre><p>Der Event-Parameter enthält Informationen zum Ereignis. <code>event.currentTarget</code> ist das Element, an dem der Listener registriert wurde.</p></section>
+<p class="tip"><strong>Merke:</strong> Bevorzuge <code>addEventListener()</code> gegenüber Inline-Attributen wie <code>onclick</code>. So bleiben Verhalten und HTML sauber getrennt.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="dom.html"><span>← VORHERIGES THEMA</span><strong>Das DOM</strong></a><a href="formulare.html"><span>NÄCHSTES THEMA →</span><strong>Formulare</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

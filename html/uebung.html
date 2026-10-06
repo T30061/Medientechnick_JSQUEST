@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#10100f">
+    <meta name="description" content="Lerne die wichtigsten JavaScript-Ausgabemethoden kennen und erfahre, wann du sie einsetzen solltest.">
+    <title>Ausgabemethoden — JS Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/uebung.css">
+</head>
+
+<body id="top" data-lesson-id="uebung" data-quiz-question="Welche Methode ist vor allem für Entwickler:innen zum Debuggen gedacht?" data-quiz-options="alert()|console.log()|prompt()" data-quiz-answer="1" data-quiz-hint="Die Ausgabe dieser Methode erscheint in den Entwicklerwerkzeugen, nicht direkt auf der Webseite.">
+    <script src="../js/quest.js" defer></script>
+
+    <header class="site-header">
+        <nav class="nav-shell" aria-label="Hauptnavigation">
+            <a class="brand" href="../index.html" aria-label="JS Studio Startseite">
+                <span class="brand-mark" aria-hidden="true">JS</span>
+                <span>js<span class="brand-light">studio</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="../index.html#themen">Themen</a>
+                <a href="../index.html#spielwiese">Spielwiese</a>
+                <a class="nav-cta" href="../index.html">← Startseite</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="lesson-shell">
+        <section class="lesson-intro" aria-labelledby="lesson-title">
+            <a class="back-link" href="../index.html">← Zurück zu JS Studio</a>
+            <p class="eyebrow"><span class="status-dot"></span> LERNEINHEIT / 15</p>
+            <h1 id="lesson-title">Ausgaben in<br><span>JavaScript.</span></h1>
+            <p class="intro">
+                JavaScript bietet verschiedene Möglichkeiten, Informationen auszugeben
+                oder Eingaben von Benutzer:innen zu erhalten. Welche Methode geeignet ist,
+                hängt davon ab, ob die Ausgabe für Entwickler:innen oder für normale
+                Webseitenbesucher:innen bestimmt ist.
+            </p>
+            <div class="lesson-meta"><span>5 Methoden</span><span aria-hidden="true">·</span><span>Etwa 5 Minuten</span><span aria-hidden="true">·</span><span>Grundlagen</span></div>
+        </section>
+
+        <section class="lesson-panel" aria-label="Übersicht der JavaScript-Ausgabemethoden">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">DIE ÜBERSICHT</p>
+                    <h2>Welche Ausgabe passt?</h2>
+                </div>
+                <span class="panel-tag">JAVASCRIPT BASICS</span>
+            </div>
+
+        <div class="table-container">
+            <table>
+                <caption>Vergleich der JavaScript-Ausgabemethoden, ihrer Zielgruppe und typischen Einsatzbereiche.</caption>
+
+                <thead>
+                    <tr>
+                        <th>Methode</th>
+                        <th>Welche Art von Inhalt?</th>
+                        <th>Welche Benutzergruppe?</th>
+                        <th>Konkreter Anwendungsfall</th>
+                        <th>Vermeiden bei …</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <code>console.log()</code>
+                        </td>
+
+                        <td>
+                            Texte, Zahlen, Variablen, Objekte und andere Werte
+                            zur Kontrolle und Fehlersuche.
+                        </td>
+
+                        <td>
+                            <span class="developer">
+                                Entwickler:innen
+                            </span>
+                            <br>
+                            Normale Besucher:innen sehen die Ausgabe nicht direkt.
+                        </td>
+
+                        <td>
+                            Variablen beim Debugging überprüfen:
+                            <br><br>
+                            <code>console.log("Punktzahl:", punkte);</code>
+                        </td>
+
+                        <td>
+                            Informationen, die für normale Webseitenbesucher:innen
+                            bestimmt sind.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <code>alert()</code>
+                        </td>
+
+                        <td>
+                            Kurze Textnachrichten oder wichtige Hinweise.
+                        </td>
+
+                        <td>
+                            <span class="users">
+                                Alle Webseitenbesucher:innen
+                            </span>
+                        </td>
+
+                        <td>
+                            Eine kurze Meldung anzeigen:
+                            <br><br>
+                            <code>alert("Aufgabe abgeschlossen!");</code>
+                        </td>
+
+                        <td>
+                            Häufige oder umfangreiche Meldungen, da der Dialog
+                            den Arbeitsfluss unterbricht.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <code>document.write()</code>
+                        </td>
+
+                        <td>
+                            Text und HTML-Code direkt in das Dokument schreiben.
+                        </td>
+
+                        <td>
+                            <span class="users">
+                                Alle Webseitenbesucher:innen
+                            </span>
+                        </td>
+
+                        <td>
+                            Einfache Ausgabe in einer Lern-Demo:
+                            <br><br>
+                            <code>document.write("&lt;h1&gt;Hallo!&lt;/h1&gt;");</code>
+                        </td>
+
+                        <td>
+                            <span class="warning">
+                                Bereits geladenen Webseiten.
+                            </span>
+                            Bei später Verwendung kann der bestehende
+                            Dokumentinhalt überschrieben werden.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <code>innerHTML</code>
+                        </td>
+
+                        <td>
+                            HTML und Text innerhalb eines bestimmten HTML-Elements.
+                        </td>
+
+                        <td>
+                            <span class="users">
+                                Alle Webseitenbesucher:innen
+                            </span>
+                        </td>
+
+                        <td>
+                            Den Inhalt einer Seite dynamisch verändern:
+                            <br><br>
+                            <code>
+                                element.innerHTML = "&lt;strong&gt;Richtig!&lt;/strong&gt;";
+                            </code>
+                        </td>
+
+                        <td>
+                            <span class="warning">
+                                Ungeprüften Benutzereingaben.
+                            </span>
+                            Die Verwendung von <code>innerHTML</code> mit
+                            unsicheren Daten kann XSS-Sicherheitslücken ermöglichen.
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>
+                            <code>prompt()</code>
+                        </td>
+
+                        <td>
+                            Empfängt eine Texteingabe vom Benutzer und liefert
+                            diese als String zurück.
+                        </td>
+
+                        <td>
+                            <span class="users">
+                                Alle Webseitenbesucher:innen
+                            </span>
+                        </td>
+
+                        <td>
+                            Den Namen des Benutzers abfragen:
+                            <br><br>
+                            <code>
+                                let name = prompt("Wie heißt du?");
+                            </code>
+                        </td>
+
+                        <td>
+                            Umfangreichen oder wichtigen Formulareingaben.
+                            Dafür sind normale HTML-Formulare meist besser geeignet.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+        </div>
+
+
+        <aside class="merksatz" aria-labelledby="takeaway-title">
+
+            <div class="takeaway-icon" aria-hidden="true">✳</div>
+            <div>
+            <p class="eyebrow">ZUM MITNEHMEN</p>
+            <h2 id="takeaway-title">Merksatz</h2>
+
+            <ul>
+                <li>
+                    🛠️ <strong>console.log()</strong> → für Entwickler:innen und Debugging
+                </li>
+
+                <li>
+                    💬 <strong>alert()</strong> → kurze Nachricht an Besucher:innen
+                </li>
+
+                <li>
+                    📄 <strong>document.write()</strong> → einfache Ausgabe, aber mit Vorsicht
+                </li>
+
+                <li>
+                    🖥️ <strong>innerHTML</strong> → HTML-Inhalte dynamisch verändern
+                </li>
+
+                <li>
+                    ⌨️ <strong>prompt()</strong> → Eingabe vom Benutzer abfragen
+                </li>
+            </ul>
+
+            </div>
+        </aside>
+        </section>
+        <nav class="exercise-nav" aria-label="Lektionsnavigation">
+            <a href="formulare.html"><span>← VORHERIGES THEMA</span><strong>Formulare</strong></a>
+            <a href="zeichenketten.html"><span>NÄCHSTES THEMA →</span><strong>String-Methoden</strong></a>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand" href="../index.html"><span class="brand-mark" aria-hidden="true">JS</span><span>js<span class="brand-light">studio</span></span></a>
+        <p>Mit Neugier gebaut. <span aria-hidden="true">✳</span> JavaScript für alle.</p>
+        <a class="footer-top" href="#top">Nach oben ↑</a>
+    </footer>
+
+</body>
+</html>

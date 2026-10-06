@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Funktionen — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="funktionen" data-quiz-question="Welches Schlüsselwort gibt einen Funktionswert zurück?" data-quiz-options="return|break|const" data-quiz-answer="0" data-quiz-hint="Es beendet die Funktion und liefert das Ergebnis an die Aufrufstelle zurück."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">07 / CODE WIEDERVERWENDEN</p><h1>Funktionen:<br><span>einmal bauen.</span></h1><p class="lead">Eine Funktion bündelt Anweisungen unter einem Namen. Du kannst sie aufrufen, Werte übergeben und ein Ergebnis zurückgeben lassen.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>Parameter, Rückgabewerte, Pfeilfunktionen</span></p>
+<section class="lesson-card"><h2>Funktion deklarieren</h2><p>Parameter sind Eingaben einer Funktion. <code>return</code> gibt ein Ergebnis zurück und beendet die Funktion.</p><pre><code>function begruessung(name) {
+  return `Hallo, ${name}!`;
+}
+
+const nachricht = begruessung("Mila");
+console.log(nachricht); // Hallo, Mila!</code></pre></section>
+<section class="lesson-card"><h2>Pfeilfunktionen</h2><p>Für kurze Funktionen ist die Pfeilschreibweise (<em>Arrow Function</em>) praktisch. Wenn der Funktionskörper nur einen Ausdruck enthält, kann die geschweifte Klammer entfallen.</p><pre><code>const verdoppeln = (zahl) => zahl * 2;
+const quadrat = zahl => zahl * zahl;
+
+console.log(verdoppeln(4)); // 8</code></pre><p>Funktionen können Werte erwarten, Werte zurückgeben oder auch eine Aktion ausführen, zum Beispiel auf einen Klick reagieren.</p></section>
+<p class="tip"><strong>Merke:</strong> Ein Parameter ist der Platzhalter in der Funktionsdefinition; ein Argument ist der konkrete Wert, den du beim Aufruf übergibst.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="schleifen.html"><span>← VORHERIGES THEMA</span><strong>Schleifen</strong></a><a href="arrays.html"><span>NÄCHSTES THEMA →</span><strong>Arrays</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer>
+<script src="../js/quest.js" defer></script></body></html>

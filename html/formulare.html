@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Formulare — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="formulare" data-quiz-question="Welches Ereignis fängst du ab, wenn ein Formular abgesendet wird?" data-quiz-options="click|submit|change" data-quiz-answer="1" data-quiz-hint="Das Ereignis heißt wie die Aktion: submit."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">14 / EINGABEN VERARBEITEN</p><h1>Formulare,<br><span>die antworten.</span></h1><p class="lead">HTML-Formulare sammeln Eingaben. JavaScript kann diese prüfen, verarbeiten und dem Nutzer direkt eine Rückmeldung geben.</p><p class="lesson-meta"><span>Webentwicklung</span><span>·</span><span>FormData und Validierung</span></p>
+<section class="lesson-card"><h2>HTML übernimmt die Basisprüfung</h2><p>Nutze HTML-Attribute wie <code>required</code>, <code>type="email"</code> und <code>minlength</code>. Damit funktioniert eine Grundvalidierung sogar dann, wenn JavaScript deaktiviert ist.</p><pre><code>&lt;form id="kontakt"&gt;
+  &lt;label for="email"&gt;E-Mail&lt;/label&gt;
+  &lt;input id="email" name="email" type="email" required&gt;
+  &lt;button&gt;Absenden&lt;/button&gt;
+&lt;/form&gt;</code></pre></section>
+<section class="lesson-card"><h2>Formular mit JavaScript auslesen</h2><p>Fange <code>submit</code> ab und nutze <code>FormData</code>, um die Felder über ihre <code>name</code>-Attribute auszulesen.</p><pre><code>const formular = document.querySelector("#kontakt");
+formular.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const daten = new FormData(formular);
+  const email = daten.get("email").trim();
+  console.log("E-Mail:", email);
+});</code></pre><p>Bei echten Anwendungen müssen Daten zusätzlich auf dem Server geprüft werden. Browser-Prüfungen allein sind keine Sicherheitsgrenze.</p></section>
+<p class="tip"><strong>Merke:</strong> Labels machen Felder verständlicher und zugänglicher. Verbinde jedes <code>&lt;label for&gt;</code> mit der passenden ID des Eingabefeldes.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="events.html"><span>← VORHERIGES THEMA</span><strong>Ereignisse</strong></a><a href="uebung.html"><span>NÄCHSTES THEMA →</span><strong>Ausgabemethoden</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body>
+<script src="../js/quest.js" defer></script>
+</html>

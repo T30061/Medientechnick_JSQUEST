@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Arrays — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="arrays" data-quiz-question="Welchen Index hat das erste Element eines Arrays?" data-quiz-options="0|1|-1" data-quiz-answer="0" data-quiz-hint="JavaScript-Arrays beginnen mit Index 0."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">08 / SAMMLUNGEN ANLEGEN</p><h1>Viele Werte.<br><span>Ein Array.</span></h1><p class="lead">Ein Array speichert mehrere Werte in einer geordneten Liste. Arrays eignen sich für Namen, Aufgaben, Produkte und viele andere Sammlungen.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>Index, Länge und grundlegende Methoden</span></p>
+<section class="lesson-card"><h2>Elemente lesen und verändern</h2><p>Der erste Eintrag steht am Index <code>0</code>. Mit <code>length</code> erhältst du die Anzahl der Einträge; der letzte Index ist also <code>length - 1</code>.</p><pre><code>const farben = ["Lila", "Grün", "Orange"];
+console.log(farben[0]);          // Lila
+console.log(farben.length);      // 3
+console.log(farben[farben.length - 1]); // Orange</code></pre></section>
+<section class="lesson-card"><h2>Einträge hinzufügen und entfernen</h2><p><code>push()</code> fügt am Ende ein, <code>pop()</code> entfernt das letzte Element. <code>unshift()</code> und <code>shift()</code> arbeiten am Anfang.</p><pre><code>const aufgaben = ["HTML lernen", "Pause machen"];
+aufgaben.push("JavaScript üben");
+const letzteAufgabe = aufgaben.pop();
+console.log(aufgaben); // ["HTML lernen", "Pause machen"]</code></pre><p>Arrays können mit <code>for...of</code> elementweise durchlaufen werden.</p></section>
+<p class="tip"><strong>Merke:</strong> Ein Array ist nullbasiert: Das erste Element hat Index 0. Für viele Aufgaben gibt es spezielle Array-Methoden, die im nächsten Thema vorkommen.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="funktionen.html"><span>← VORHERIGES THEMA</span><strong>Funktionen</strong></a><a href="array-methoden.html"><span>NÄCHSTES THEMA →</span><strong>Array-Methoden</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body>
+<script src="../js/quest.js" defer></script>
+</html>

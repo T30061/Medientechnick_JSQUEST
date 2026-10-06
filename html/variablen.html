@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f">
+  <title>Variablen in JavaScript — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css">
+</head>
+<body data-lesson-id="variablen" data-quiz-question="Welche Deklaration passt, wenn sich der gespeicherte Wert noch ändern soll?" data-quiz-options="const|let|function" data-quiz-answer="1" data-quiz-hint="Diese Deklaration erlaubt eine spätere Neuzuweisung.">
+<script src="../js/quest.js" defer></script>
+<header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">02 / WERTE SPEICHERN</p><h1>Variablen &amp;<br><span>Konstanten.</span></h1><p class="lead">Variablen geben Werten einen Namen. So kannst du Daten speichern, später wiederverwenden und in deinem Programm verändern.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>let, const und Gültigkeitsbereiche</span></p>
+<section class="lesson-card"><h2>Werte benennen</h2><p>Verwende <code>const</code>, wenn eine Variable später nicht neu zugewiesen werden soll. Nutze <code>let</code>, wenn sich der gespeicherte Wert ändern muss. <code>var</code> ist eine ältere Schreibweise und wird in neuem Code meist vermieden.</p><pre><code>const vorname = "Mila";
+let punkte = 0;
+punkte = punkte + 10;
+
+console.log(vorname, punkte); // Mila 10</code></pre></section>
+<section class="lesson-card"><h2>Gute Namen wählen</h2><p>Namen sollten erklären, was gespeichert wird. JavaScript-Entwickler:innen verwenden oft <em>camelCase</em>: Das erste Wort beginnt klein, weitere Wörter beginnen groß.</p><pre><code>const lieblingsFarbe = "Violett";
+let istEingeloggt = false;</code></pre><p>Ein konstanter Variablenname bedeutet nicht automatisch, dass ein Objekt unveränderlich ist — <code>const</code> verhindert nur die Neuzuweisung der Variablen.</p></section>
+<p class="tip"><strong>Merke:</strong> Standardmäßig <code>const</code> verwenden. Erst zu <code>let</code> wechseln, wenn du tatsächlich einen neuen Wert zuweisen musst.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="syntax.html"><span>← VORHERIGES THEMA</span><strong>Erste Schritte</strong></a><a href="datentypen.html"><span>NÄCHSTES THEMA →</span><strong>Datentypen</strong></a></nav></main>
+<footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

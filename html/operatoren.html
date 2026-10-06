@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Operatoren — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="operatoren" data-quiz-question="Ist der strikte Vergleich einer Zahl 5 mit dem Text 5 wahr oder falsch?" data-quiz-options="Wahr|Falsch|Es gibt einen Fehler" data-quiz-answer="1" data-quiz-hint="Der strikte Vergleich prüft auch den Datentyp: Zahl und Text sind verschieden."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">04 / MIT WERTEN ARBEITEN</p><h1>Rechnen,<br><span>vergleichen, prüfen.</span></h1><p class="lead">Operatoren verknüpfen Werte miteinander. Sie helfen dir zu rechnen, Bedingungen zu vergleichen und mehrere Aussagen logisch zu kombinieren.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>Rechen- und Vergleichsoperatoren</span></p>
+<section class="lesson-card"><h2>Rechnen und zuweisen</h2><p>Die üblichen Rechenzeichen sind <code>+</code>, <code>-</code>, <code>*</code> und <code>/</code>. Mit <code>%</code> erhältst du den Rest einer Division. Kurzformen wie <code>+=</code> aktualisieren eine Variable.</p><pre><code>let punkte = 10;
+punkte += 5; // dasselbe wie: punkte = punkte + 5
+console.log(punkte); // 15
+console.log(10 % 3); // 1</code></pre></section>
+<section class="lesson-card"><h2>Vergleiche und Logik</h2><p>Vergleichsoperatoren liefern immer einen Wahrheitswert. Verwende normalerweise <code>===</code> und <code>!==</code>, damit JavaScript nicht nebenbei Datentypen umwandelt.</p><pre><code>const alter = 18;
+console.log(alter >= 18); // true
+console.log(5 === "5");  // false
+
+// UND, ODER, NICHT
+const darfMitmachen = alter >= 18 && true;</code></pre><p><code>&amp;&amp;</code> bedeutet UND, <code>||</code> bedeutet ODER und <code>!</code> kehrt einen Wahrheitswert um.</p></section>
+<p class="tip"><strong>Merke:</strong> <code>==</code> vergleicht nach möglicher Typumwandlung. Nutze <code>===</code> für einen strikten Vergleich von Wert und Typ.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="datentypen.html"><span>← VORHERIGES THEMA</span><strong>Datentypen</strong></a><a href="bedingungen.html"><span>NÄCHSTES THEMA →</span><strong>Bedingungen</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer>
+<script src="../js/quest.js" defer></script></body></html>

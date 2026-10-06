@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Asynchrones JavaScript — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="asynchron" data-quiz-question="Welches Schlüsselwort wartet in einer async-Funktion auf ein Promise?" data-quiz-options="await|return|yield" data-quiz-answer="0" data-quiz-hint="Es pausiert die async-Funktion, bis der Promise abgeschlossen ist."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">19 / AUF SPÄTERES WARTEN</p><h1>Asynchron:<br><span>Es dauert kurz.</span></h1><p class="lead">Manche Aufgaben brauchen Zeit — etwa Daten aus dem Netzwerk zu laden. Asynchrones JavaScript lässt die Seite währenddessen weiterarbeiten.</p><p class="lesson-meta"><span>Fortgeschrittene Grundlagen</span><span>·</span><span>Promise, async/await und fetch</span></p>
+<section class="lesson-card"><h2>Promise und async/await</h2><p>Ein <code>Promise</code> steht für ein Ergebnis, das später verfügbar wird. Mit <code>async</code> und <code>await</code> lässt sich asynchroner Code gut lesbar schreiben. Fehler fängst du mit <code>try...catch</code> ab.</p><pre><code>async function ladeDaten() {
+  try {
+    const antwort = await fetch("/api/infos");
+    if (!antwort.ok) throw new Error("Antwort fehlgeschlagen");
+    const daten = await antwort.json();
+    console.log(daten);
+  } catch (fehler) {
+    console.error("Daten konnten nicht geladen werden", fehler);
+  }
+}</code></pre></section>
+<section class="lesson-card"><h2>Was passiert hier?</h2><ol><li><code>fetch()</code> startet die Netzwerkanfrage und liefert ein Promise zurück.</li><li><code>await</code> wartet innerhalb der <code>async</code>-Funktion auf das Ergebnis.</li><li><code>response.ok</code> prüft, ob der HTTP-Status erfolgreich war.</li><li><code>response.json()</code> liest den Antworttext als JSON-Daten.</li></ol></section>
+<p class="tip"><strong>Merke:</strong> Netzwerkfehler und HTTP-Fehler sind nicht dasselbe. Darum neben <code>try...catch</code> auch <code>response.ok</code> prüfen.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="speicher.html"><span>← VORHERIGES THEMA</span><strong>Browser-Speicher</strong></a><a href="module.html"><span>NÄCHSTES THEMA →</span><strong>Module</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body>
+<script src="../js/quest.js" defer></script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Bedingungen — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="bedingungen" data-quiz-question="Welcher Block läuft, wenn die if-Bedingung false ist und es einen else-Block gibt?" data-quiz-options="Der if-Block|Der else-Block|Beide Blöcke" data-quiz-answer="1" data-quiz-hint="else bedeutet: andernfalls — also wenn die if-Bedingung nicht zutrifft.">
+  <script src="../js/quest.js" defer></script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10100f">
+  <title>Bedingungen — JS Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/lesson.css">
+</head>
+<body><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">05 / ENTSCHEIDUNGEN TREFFEN</p><h1>Wenn das,<br><span>dann jenes.</span></h1><p class="lead">Mit Bedingungen lässt du dein Programm unterschiedliche Wege nehmen — abhängig davon, ob eine Aussage wahr oder falsch ist.</p><p class="lesson-meta"><span>Einsteiger</span><span>·</span><span>if, else und switch</span></p>
+<section class="lesson-card"><h2>if und else</h2><p>Der Code im <code>if</code>-Block läuft nur, wenn die Bedingung wahr ist. <code>else</code> beschreibt, was sonst passieren soll. Mit <code>else if</code> prüfst du weitere Fälle.</p><pre><code>const temperatur = 22;
+
+if (temperatur > 25) {
+  console.log("Warm!");
+} else if (temperatur >= 15) {
+  console.log("Angenehm.");
+} else {
+  console.log("Zieh eine Jacke an.");
+}</code></pre></section>
+<section class="lesson-card"><h2>Mehrere Fälle mit switch</h2><p><code>switch</code> ist hilfreich, wenn du denselben Wert mit mehreren konkreten Möglichkeiten vergleichst. Ein <code>break</code> verhindert, dass der nächste Fall ebenfalls ausgeführt wird.</p><pre><code>const tag = "Samstag";
+switch (tag) {
+  case "Samstag":
+  case "Sonntag":
+    console.log("Wochenende!");
+    break;
+  default:
+    console.log("Zeit für den Alltag.");
+}</code></pre></section>
+<p class="tip"><strong>Merke:</strong> Bedingungen sollten zu einem klaren Wahrheitswert führen. Ein einzelnes Gleichheitszeichen (<code>=</code>) weist zu; für Vergleiche brauchst du <code>===</code>.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="operatoren.html"><span>← VORHERIGES THEMA</span><strong>Operatoren</strong></a><a href="schleifen.html"><span>NÄCHSTES THEMA →</span><strong>Schleifen</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Math und Datum — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="zeit-math" data-quiz-question="Was ergibt Math.floor(4.9)?" data-quiz-options="4|5|4.9" data-quiz-answer="0" data-quiz-hint="floor rundet immer ab, also zur nächstkleineren ganzen Zahl."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">17 / NÜTZLICHE BUILT-INS</p><h1>Zeit, Zufall<br><span>&amp; Mathematik.</span></h1><p class="lead">JavaScript bringt hilfreiche eingebaute Objekte mit. Mit <code>Math</code> rechnest du; mit <code>Date</code> arbeitest du mit Zeitpunkten und Datumsangaben.</p><p class="lesson-meta"><span>JavaScript-Methoden</span><span>·</span><span>Math und Date</span></p>
+<section class="lesson-card"><h2>Das Math-Objekt</h2><p><code>Math.round()</code> rundet, <code>Math.floor()</code> rundet ab, <code>Math.ceil()</code> rundet auf. <code>Math.max()</code> findet den größten Wert.</p><pre><code>console.log(Math.round(4.6)); // 5
+console.log(Math.floor(4.9)); // 4
+console.log(Math.max(3, 8, 2)); // 8
+
+// Zufallszahl von 0 bis kleiner als 1
+console.log(Math.random());</code></pre></section>
+<section class="lesson-card"><h2>Datum und Zeit</h2><p>Ein neues <code>Date</code>-Objekt enthält den aktuellen Zeitpunkt. <code>getFullYear()</code> und <code>getMonth()</code> liefern einzelne Bestandteile; der Monat beginnt dabei bei 0.</p><pre><code>const jetzt = new Date();
+console.log(jetzt.getFullYear());
+console.log(jetzt.getMonth() + 1); // Monat 1–12
+console.log(jetzt.toLocaleDateString("de-DE"));</code></pre><p>Für eine formatierte Anzeige ist <code>toLocaleDateString()</code> meist besser als Datumsteile manuell zusammenzufügen.</p></section>
+<p class="tip"><strong>Merke:</strong> <code>Math.random()</code> ist nicht für Passwörter oder sicherheitskritische Zufallswerte gedacht. Dafür gibt es die Web Crypto API.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="zeichenketten.html"><span>← VORHERIGES THEMA</span><strong>String-Methoden</strong></a><a href="speicher.html"><span>NÄCHSTES THEMA →</span><strong>Browser-Speicher</strong></a></nav>
+<script src="../js/quest.js" defer></script></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

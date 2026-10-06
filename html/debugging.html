@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>Fehler finden und behandeln — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="debugging" data-quiz-question="Welche Methode hebt eine Fehlermeldung in der Browserkonsole hervor?" data-quiz-options="console.log()|console.warn()|console.error()" data-quiz-answer="2" data-quiz-hint="Diese console-Methode heißt nach dem englischen Wort für Fehler.">
+  <script src="../js/quest.js" defer></script>
+<header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">21 / FEHLER FINDEN UND BEHEBEN</p><h1>Debugging:<br><span>Detektivarbeit.</span></h1><p class="lead">Fehler gehören zum Programmieren. Mit der Browserkonsole, klaren Meldungen und kleinen Tests findest du Ursachen systematisch.</p><p class="lesson-meta"><span>Gute Praxis</span><span>·</span><span>Konsole, try/catch und Fehlermeldungen</span></p>
+<section class="lesson-card"><h2>Die Konsole als Werkzeug</h2><p><code>console.log()</code> zeigt Werte, <code>console.warn()</code> hebt Hinweise hervor und <code>console.error()</code> markiert Fehler. In den Entwicklerwerkzeugen kannst du außerdem Breakpoints setzen und den Code Schritt für Schritt ausführen.</p><pre><code>const preis = 12;
+const anzahl = 3;
+console.log("Zwischensumme:", preis * anzahl);</code></pre></section>
+<section class="lesson-card"><h2>Fehler gezielt behandeln</h2><p>Mit <code>throw</code> meldest du einen Fehler. <code>try...catch</code> behandelt Fehler, die während eines bestimmten Vorgangs auftreten können.</p><pre><code>function teile(a, b) {
+  if (b === 0) throw new Error("Division durch 0");
+  return a / b;
+}
+
+try {
+  console.log(teile(8, 0));
+} catch (fehler) {
+  console.error(fehler.message);
+}</code></pre></section>
+<section class="lesson-card"><h2>Ein guter Debugging-Ablauf</h2><ol><li>Lies die Fehlermeldung und öffne die genannte Datei und Stelle.</li><li>Prüfe Eingabewerte und Zwischenergebnisse in der Konsole.</li><li>Ändere eine Sache und teste erneut.</li><li>Entferne unnötige Debug-Ausgaben, wenn du fertig bist.</li></ol></section>
+<p class="tip"><strong>Merke:</strong> Eine Fehlermeldung ist ein Hinweis, kein Urteil. Suche nach der ersten Stelle, an der das Ergebnis von deiner Erwartung abweicht.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="module.html"><span>← VORHERIGES THEMA</span><strong>Module</strong></a><a href="../index.html#themen"><span>KURS ABSCHLIESSEN</span><strong>Zur Themenübersicht</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body></html>

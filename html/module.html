@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#10100f"><title>JavaScript-Module — JS Studio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../css/lesson.css"></head>
+<body data-lesson-id="module" data-quiz-question="Welches Schlüsselwort stellt eine benannte Funktion für andere Module bereit?" data-quiz-options="import|export|module" data-quiz-answer="1" data-quiz-hint="Das Wort bedeutet, etwas aus der aktuellen Datei heraus verfügbar zu machen."><header class="site-header"><nav class="nav-shell" aria-label="Hauptnavigation"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><div class="nav-links"><a href="../index.html#themen">Alle Themen</a><a class="nav-cta" href="../index.html">Startseite ↗</a></div></nav></header>
+<main class="lesson-shell"><a class="breadcrumb" href="../index.html#themen">← Alle JavaScript-Themen</a><p class="eyebrow">20 / CODE AUFTEILEN</p><h1>Module:<br><span>Ordnung im Projekt.</span></h1><p class="lead">Module teilen ein größeres JavaScript-Projekt in Dateien mit klaren Aufgaben. Du kannst Funktionen und Werte gezielt exportieren und in anderen Dateien importieren.</p><p class="lesson-meta"><span>Fortgeschrittene Grundlagen</span><span>·</span><span>export und import</span></p>
+<section class="lesson-card"><h2>Benannte Exporte</h2><p>In <code>rechner.js</code> exportierst du genau die Funktion, die andere Dateien verwenden dürfen.</p><pre><code>// rechner.js
+export function addiere(a, b) {
+  return a + b;
+}</code></pre></section>
+<section class="lesson-card"><h2>Importieren und im Browser starten</h2><p>Eine andere Datei importiert den benannten Export. Damit der Browser Module erkennt, erhält das Script-Element den Typ <code>module</code>.</p><pre><code>// app.js
+import { addiere } from "./rechner.js";
+console.log(addiere(2, 3));
+
+// in der HTML-Datei:
+&lt;script type="module" src="./app.js"&gt;&lt;/script&gt;</code></pre><p>Module laufen automatisch im strikten Modus und haben ihren eigenen Gültigkeitsbereich. Beim Testen kann ein lokaler Entwicklungsserver nötig sein.</p></section>
+<p class="tip"><strong>Merke:</strong> Halte Module klein und thematisch zusammenhängend. Exportiere nur, was andere Teile des Projekts wirklich brauchen.</p>
+<nav class="lesson-nav" aria-label="Lektionsnavigation"><a href="asynchron.html"><span>← VORHERIGES THEMA</span><strong>Asynchrones JavaScript</strong></a><a href="debugging.html"><span>NÄCHSTES THEMA →</span><strong>Fehler finden</strong></a></nav></main><footer class="site-footer"><a class="brand" href="../index.html"><span class="brand-mark">JS</span><span>js<span class="brand-light">studio</span></span></a><p>Mit Neugier gebaut. <span>✳</span> JavaScript für alle.</p><a class="footer-link" href="../index.html#themen">Themenübersicht ↑</a></footer></body>
+<script src="../js/quest.js" defer></script>
+</html>
